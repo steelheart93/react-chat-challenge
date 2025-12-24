@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
 import io from "socket.io-client";
 
-// Asegúrate que este puerto coincida con el que definiste en el servidor (3001)
-const socket = io.connect("http://localhost:3001");
+// COMENTA O BORRA ESTO:
+// const socket = io.connect('http://localhost:3001');
+
+// PON ESTO (Sin la barra / al final):
+const socket = io.connect("https://chat-server-react.onrender.com");
 
 export const useChat = () => {
   const [messages, setMessages] = useState([]);
